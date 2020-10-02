@@ -1,0 +1,4 @@
+#Fri Oct 02 11:59:31 BRT 2020
+base.0=/home/mendoza/Documentos/udemy/flutter/contador_de_pessoas/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
