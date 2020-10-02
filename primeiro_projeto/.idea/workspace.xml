@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="81054615-a983-4108-a910-141af7ae0cec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1iFiKiQD3gipNQ8IXT5DSWrWTVK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81054615-a983-4108-a910-141af7ae0cec" name="Default Changelist" comment="" />
+      <created>1601509679539</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601509679539</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1266" height="172" key="GridCell.Tab.0.bottom" timestamp="1601510560462">
+      <screen x="54" y="27" width="1312" height="741" />
+    </state>
+    <state width="1266" height="172" key="GridCell.Tab.0.bottom/54.27.1312.741@54.27.1312.741" timestamp="1601510560462" />
+    <state width="1266" height="172" key="GridCell.Tab.0.center" timestamp="1601510560459">
+      <screen x="54" y="27" width="1312" height="741" />
+    </state>
+    <state width="1266" height="172" key="GridCell.Tab.0.center/54.27.1312.741@54.27.1312.741" timestamp="1601510560459" />
+    <state width="1266" height="172" key="GridCell.Tab.0.left" timestamp="1601510560458">
+      <screen x="54" y="27" width="1312" height="741" />
+    </state>
+    <state width="1266" height="172" key="GridCell.Tab.0.left/54.27.1312.741@54.27.1312.741" timestamp="1601510560458" />
+    <state width="1266" height="172" key="GridCell.Tab.0.right" timestamp="1601510560460">
+      <screen x="54" y="27" width="1312" height="741" />
+    </state>
+    <state width="1266" height="172" key="GridCell.Tab.0.right/54.27.1312.741@54.27.1312.741" timestamp="1601510560460" />
+    <state x="199" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1601509859336">
+      <screen x="54" y="27" width="1312" height="741" />
+    </state>
+    <state x="199" y="31" width="1022" height="737" key="SettingsEditor/54.27.1312.741@54.27.1312.741" timestamp="1601509859336" />
+    <state x="154" y="127" width="1112" height="541" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1601594240320">
+      <screen x="54" y="27" width="1312" height="741" />
+    </state>
+    <state x="154" y="127" width="1112" height="541" key="com.android.tools.idea.avdmanager.AvdListDialog/54.27.1312.741@54.27.1312.741" timestamp="1601594240320" />
+    <state x="366" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1601594207942">
+      <screen x="54" y="27" width="1312" height="741" />
+    </state>
+    <state x="366" y="225" key="com.intellij.ide.util.TipDialog/54.27.1312.741@54.27.1312.741" timestamp="1601594207942" />
+  </component>
+</project>

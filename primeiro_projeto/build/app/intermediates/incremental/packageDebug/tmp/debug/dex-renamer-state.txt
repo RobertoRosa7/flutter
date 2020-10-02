@@ -1,0 +1,4 @@
+#Thu Oct 01 20:08:41 BRT 2020
+base.0=/home/mendoza/Documentos/udemy/flutter/primeiro_projeto/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
