@@ -31,7 +31,46 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   double dolar;
   double euro;
-  double real;
+
+  final realController = TextEditingController();
+  final euroController = TextEditingController();
+  final dolarController = TextEditingController();
+
+  void _realChange(String text) {
+    if (text.isEmpty) {
+      resetAllFields();
+      return;
+    }
+    double real = double.parse(text);
+    dolarController.text = (real / dolar).toStringAsFixed(2);
+    euroController.text = (real / euro).toStringAsFixed(2);
+  }
+
+  void _dolarChange(String text) {
+    if (text.isEmpty) {
+      resetAllFields();
+      return;
+    }
+    double dolar = double.parse(text);
+    realController.text = (dolar * this.dolar).toStringAsFixed(2);
+    euroController.text = (dolar * this.dolar / euro).toStringAsFixed(2);
+  }
+
+  void _euroChange(String text) {
+    if (text.isEmpty) {
+      resetAllFields();
+      return;
+    }
+    double euro = double.parse(text);
+    realController.text = (euro * this.euro).toStringAsFixed(2);
+    euroController.text = (euro * this.euro / dolar).toStringAsFixed(2);
+  }
+
+  void resetAllFields() {
+    realController.text = '';
+    dolarController.text = '';
+    euroController.text = '';
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -78,32 +117,13 @@ class _HomeState extends State<Home> {
                         size: 150.0,
                         color: Colors.amber,
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                            labelText: "Reais",
-                            labelStyle: TextStyle(color: Colors.amber),
-                            border: OutlineInputBorder(),
-                            prefixText: "R\$ "),
-                        style: TextStyle(color: Colors.amber, fontSize: 25.0),
-                      ),
+                      buildTextField(
+                          'Reais', 'R\$ ', realController, _realChange),
                       Divider(),
-                      TextField(
-                        decoration: InputDecoration(
-                            labelText: "Dolares",
-                            labelStyle: TextStyle(color: Colors.amber),
-                            border: OutlineInputBorder(),
-                            prefixText: "US\$ "),
-                        style: TextStyle(color: Colors.amber, fontSize: 25.0),
-                      ),
+                      buildTextField(
+                          'Dólares', 'US\$ ', dolarController, _dolarChange),
                       Divider(),
-                      TextField(
-                        decoration: InputDecoration(
-                            labelText: "Euros",
-                            labelStyle: TextStyle(color: Colors.amber),
-                            border: OutlineInputBorder(),
-                            prefixText: "€ "),
-                        style: TextStyle(color: Colors.amber, fontSize: 25.0),
-                      )
+                      buildTextField('Euros', '€ ', euroController, _euroChange)
                     ],
                   ),
                 );
@@ -117,3 +137,18 @@ class _HomeState extends State<Home> {
 
 Future<Map> getData() async => jsonToMap(await http.get(api_HGFinance));
 Future<Map> jsonToMap(http.Response res) async => await json.decode(res.body);
+
+Widget buildTextField(
+    String label, String prefix, TextEditingController ctrl, Function f) {
+  return TextField(
+    controller: ctrl,
+    decoration: InputDecoration(
+        labelText: label,
+        labelStyle: TextStyle(color: Colors.amber),
+        border: OutlineInputBorder(),
+        prefixText: prefix),
+    style: TextStyle(color: Colors.amber, fontSize: 25.0),
+    onChanged: f,
+    keyboardType: TextInputType.number,
+  );
+}
