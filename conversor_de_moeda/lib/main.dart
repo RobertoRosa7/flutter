@@ -7,6 +7,8 @@ const api_HGFinance =
     'https://api.hgbrasil.com/finance?format=json-cors&key=32c83f5f';
 
 void main() async {
+  // path_provider: ^1.1.0 para o app lista de tarefas
+
   runApp(MaterialApp(
     home: Home(),
     theme: ThemeData(
@@ -63,7 +65,7 @@ class _HomeState extends State<Home> {
     }
     double euro = double.parse(text);
     realController.text = (euro * this.euro).toStringAsFixed(2);
-    euroController.text = (euro * this.euro / dolar).toStringAsFixed(2);
+    dolarController.text = (euro * this.euro / dolar).toStringAsFixed(2);
   }
 
   void resetAllFields() {
@@ -149,6 +151,6 @@ Widget buildTextField(
         prefixText: prefix),
     style: TextStyle(color: Colors.amber, fontSize: 25.0),
     onChanged: f,
-    keyboardType: TextInputType.number,
+    keyboardType: TextInputType.numberWithOptions(decimal: true),
   );
 }
