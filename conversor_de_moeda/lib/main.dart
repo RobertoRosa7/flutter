@@ -7,9 +7,17 @@ const api_HGFinance =
     'https://api.hgbrasil.com/finance?format=json-cors&key=32c83f5f';
 
 void main() async {
-  // print(await getData());
-
   runApp(MaterialApp(
+    theme: ThemeData(
+        hintColor: Colors.amber,
+        primaryColor: Colors.white,
+        inputDecorationTheme: InputDecorationTheme(
+          enabledBorder:
+              OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+          focusedBorder:
+              OutlineInputBorder(borderSide: BorderSide(color: Colors.amber)),
+          hintStyle: TextStyle(color: Colors.amber),
+        )),
     home: Home(),
   ));
 }
@@ -29,7 +37,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.amber,
         centerTitle: true,
       ),
-      body: FutureBuilder(
+      body: FutureBuilder<Map>(
         future: getData(),
         builder: (context, snapshot) {
           switch (snapshot.connectionState) {
