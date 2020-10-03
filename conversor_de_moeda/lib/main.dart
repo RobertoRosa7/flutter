@@ -29,9 +29,39 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.amber,
         centerTitle: true,
       ),
+      body: FutureBuilder(
+        future: getData(),
+        builder: (context, snapshot) {
+          switch (snapshot.connectionState) {
+            case ConnectionState.done:
+            case ConnectionState.waiting:
+              return Center(
+                child: Text(
+                  "Carregando...",
+                  style: TextStyle(color: Colors.amber, fontSize: 25.0),
+                  textAlign: TextAlign.center,
+                ),
+              );
+            default:
+              if (snapshot.hasError) {
+                return Center(
+                  child: Text(
+                    "Error ao carregar!",
+                    style: TextStyle(color: Colors.amber, fontSize: 25.0),
+                    textAlign: TextAlign.center,
+                  ),
+                );
+              } else {
+                return Container(
+                  color: Colors.green,
+                );
+              }
+          }
+        },
+      ),
     );
   }
 }
 
 Future<Map> getData() async => jsonToMap(await http.get(api_HGFinance));
-Future<Map> jsonToMap(res) async => await json.decode(res.body);
+Future<Map> jsonToMap(http.Response res) async => await json.decode(res.body);
